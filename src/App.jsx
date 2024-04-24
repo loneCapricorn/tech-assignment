@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+// layouts and pages
+import RootLayout from "./layouts/RootLayout";
+import MainDashboard from "./pages/MainDashboard";
+import LoginPage from "./pages/LoginPage";
+import OrderHistory from "./pages/OrderHistory";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+// router and routes
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<MainDashboard />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="order-history" element={<OrderHistory />} />
+    </Route>
   )
-}
+);
 
-export default App
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;
