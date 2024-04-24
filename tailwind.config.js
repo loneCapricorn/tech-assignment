@@ -10,6 +10,9 @@ export default {
         palanquin: ["Palanquin", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      colors: {
+        primary: "#242424",
+      },
     },
   },
   plugins: [],
