@@ -5,16 +5,16 @@ import SideMenu from "../components/SideMenu";
 
 const RootLayout = () => {
   return (
-    <div className="grid grid-cols-6">
-      <aside className="max-md:col-span-6 md:col-span-2 md:h-screen lg:col-span-1">
+    <div className="grid grid-cols-6 max-container">
+      <aside className="max-md:col-span-6 md:col-span-2 md:h-screen lg:col-span-1 bg-emerald-900">
         <SideMenu />
       </aside>
 
-      <div className="max-md:col-span-6 md:col-span-4 lg:col-span-5">
+      <div className="flex flex-col max-md:col-span-6 md:col-span-4 lg:col-span-5">
         <header>
           <Header />
         </header>
-        <main>
+        <main className="flex-1">
           <Outlet />
         </main>
         <footer>
