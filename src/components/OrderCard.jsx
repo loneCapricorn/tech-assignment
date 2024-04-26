@@ -1,10 +1,6 @@
 import PropTypes from "prop-types";
 
 const OrderCard = ({ product, quantity, priceForOne, timestamp }) => {
-  const date = new Date(timestamp);
-  const result = date.toLocaleDateString();
-  console.log(result);
-
   return (
     <li className="flex-1 sm:w-[350px] rounded-2xl shadow-3xl px-10 py-12">
       <h2 className="font-palanquin text-3xl leading-tight font-bold">
