@@ -8,6 +8,7 @@ import {
 // layouts and pages
 import RootLayout from "./layouts/RootLayout";
 import MainDashboard from "./pages/MainDashboard";
+import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import OrderHistory from "./pages/OrderHistory";
 import { loadOrderHistory } from "./services/request-services";
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<MainDashboard />} />
+      <Route path="*" element={<NotFound />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="order-history" element={<OrderHistory />} loader={loadOrderHistory} />
     </Route>
