@@ -1,8 +1,36 @@
-# React + Vite
+# Simple Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Welcome to our innovative React application, which offers convenience and ease in online shopping for our products. Our goal is to provide customers with an incredible experience where they can discover, shop, and manage their orders with minimal effort and maximum pleasure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Technologies
+
+- HTML
+- Tailwind CSS
+- JavaScript
+- React
+- Git
+
+
+
+## How to run the project
+
+1. Clone the repository
+2. Install the dependencies
+```bash 
+npm install
+```
+4. Run the application
+```bash
+npm run dev
+```
+6. Open your browser and go to `http://localhost:3000/`
+
+
+
+## Author
+
+Mehmed Yunuz
+
