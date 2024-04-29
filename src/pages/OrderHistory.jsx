@@ -9,11 +9,13 @@ const OrderHistory = () => {
   }
 
   return (
-    <ul className="flex flex-wrap gap-12 p-7">
-      {orders.map((order) => (
-        <OrderCard key={order.id} {...order} />
-      ))}
-    </ul>
+    <main>
+      <ul className="flex flex-wrap gap-12 p-7">
+        {orders.map((order) => (
+          <OrderCard key={order.id} {...order} />
+        ))}
+      </ul>
+    </main>
   );
 };
 
