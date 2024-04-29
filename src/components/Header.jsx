@@ -12,7 +12,7 @@ const Header = () => {
     <header className="relative">
       <Navbar changeHeader={setHeader} />
       <div className="flex items-center justify-around py-5">
-        <h1 className="text-2xl font-semibold">{header}</h1>
+        <h1 className="font-semibold">{header}</h1>
         {!showDropdown ? (
           <RxHamburgerMenu
             className="sm:hidden text-3xl cursor-pointer"

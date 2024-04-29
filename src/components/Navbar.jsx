@@ -14,7 +14,7 @@ const Navbar = ({ changeHeader = () => {} }) => {
           onClick={() => {
             changeHeader(label);
           }}
-          className="font-montserrat text-xl md:text-2xl"
+          className="font-montserrat"
         >
           {label}
         </NavLink>

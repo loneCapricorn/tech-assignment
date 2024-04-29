@@ -10,8 +10,8 @@ const Footer = () => {
           <a href="/">
             <img src={dashboard} />
           </a>
-          <p className="text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, quaerat recusandae magni alias consequatur ab aliquid quos quis voluptas ad necessitatibus officiis, cumque nemo. Ut sit accusamus aut tenetur inventore!
+          <p className="font-montserrat text-white-400 sm:max-w-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
           <div className="flex items-center gap-5">
             {socialMedia.map((icon, index) => (
@@ -36,7 +36,7 @@ const Footer = () => {
                     key={link.name}
                     className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
                   >
-                    <a href="">{link.name}</a>
+                    <a href="/">{link.name}</a>
                   </li>
                 ))}
               </ul>

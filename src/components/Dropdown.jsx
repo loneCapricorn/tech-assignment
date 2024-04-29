@@ -15,7 +15,7 @@ const Dropdown = ({ changeHeader = () => {}, setShowDropdown = () => {} }) => {
             setShowDropdown(false);
             changeHeader(label);
           }}
-          className="font-montserrat font-medium text-xl md:text-2xl border-b-[1px] p-2 hover:translate-x-1 transition-transform"
+          className="font-montserrat font-medium border-b-[1px] p-2 hover:translate-x-1 transition-transform"
         >
           {label}
         </NavLink>
