@@ -5,7 +5,11 @@ const OrderHistory = () => {
   const orders = useLoaderData();
 
   if (orders instanceof Error) {
-    return <h1 className="text-center font-montserrat">{orders.message}</h1>;
+    return (
+      <main className="flex justify-center items-center mx-5 my-10 h-32">
+        <h1 className="text-center font-montserrat">{orders.message}</h1>
+      </main>
+    );
   }
 
   return (
