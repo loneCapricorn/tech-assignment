@@ -3,7 +3,7 @@ import { facebook, instagram, twitter } from "../assets/icons";
 const loginURL = "https://0wzm4.wiremockapi.cloud/login";
 const orderHistoryURL = "https://0wzm4.wiremockapi.cloud/orders";
 
-const sideMenuItems = [
+const navbarItems = [
   {
     label: "Dashboard",
     path: "/",
@@ -57,4 +57,4 @@ const socialMedia = [
   { src: instagram, alt: "instagram logo" },
 ];
 
-export { loginURL, orderHistoryURL, sideMenuItems, footerLinks, socialMedia };
+export { loginURL, orderHistoryURL, navbarItems, footerLinks, socialMedia };
