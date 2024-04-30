@@ -6,7 +6,7 @@ import { v4 as uniqueId } from "uuid";
 
 const Dropdown = ({ changeHeader = () => {}, setShowDropdown = () => {} }) => {
   return (
-    <nav className="flex flex-col items-end absolute z-10 -bottom-48 p-7 bg-slate-100 w-screen">
+    <nav className="flex flex-col items-end absolute z-10 -bottom-44 p-7 bg-slate-100 w-screen">
       {navbarItems.map(({ label, path }) => (
         <NavLink
           key={uniqueId()}
