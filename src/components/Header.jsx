@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="relative">
       <Navbar changeHeader={setHeader} />
-      <div className="flex items-center justify-around py-5">
+      <div className="flex items-center justify-around py-4">
         <h1 className="font-semibold">{header}</h1>
         {!showDropdown ? (
           <RxHamburgerMenu

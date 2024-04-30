@@ -6,7 +6,7 @@ import { v4 as uniqueId } from "uuid";
 
 const Navbar = ({ changeHeader = () => {} }) => {
   return (
-    <nav className="flex items-center justify-around py-10 max-sm:hidden">
+    <nav className="flex items-center justify-around py-4 max-sm:hidden">
       {navbarItems.map(({ label, path }) => (
         <NavLink
           key={uniqueId()}
