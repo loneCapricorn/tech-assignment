@@ -19,16 +19,16 @@ const Header = () => {
             onClick={() => setShowDropdown(true)}
           />
         ) : (
-          <>
-            <IoMdClose
-              className="sm:hidden text-3xl cursor-pointer"
-              onClick={() => setShowDropdown(false)}
-            />
-            <Dropdown
-              changeHeader={setHeader}
-              setShowDropdown={setShowDropdown}
-            />
-          </>
+          <IoMdClose
+            className="text-3xl cursor-pointer"
+            onClick={() => setShowDropdown(false)}
+          />
+        )}
+        {showDropdown && (
+          <Dropdown
+            changeHeader={setHeader}
+            setShowDropdown={setShowDropdown}
+          />
         )}
       </div>
     </header>
