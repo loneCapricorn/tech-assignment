@@ -1,21 +1,34 @@
-import { orderHistoryURL } from "../constants";
+import { get, ref } from "firebase/database";
+import { db } from "../config/firebase-config.js";
 
-const getLineChartURL = (timestamp) =>
-  `https://0wzm4.wiremockapi.cloud/linechart/startdate/${timestamp}/enddate/${timestamp}`;
+const getLineChart = async () => {
+  const lineChartReference = ref(db, "line-chart");
+  const snapshot = await get(lineChartReference);
 
-const getPieeChartURL = (timestamp) =>
-  `https://0wzm4.wiremockapi.cloud/piechart/startdate/${timestamp}/enddate/${timestamp}`;
-
-const loadOrderHistory = async () => {
-  return fetch(orderHistoryURL)
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("Failed to fetch order history!");
-      }
-      return res.json();
-    })
-    .then((data) => data.payload)
-    .catch((err) => err);
+  return snapshot.val();
 };
 
-export { loadOrderHistory };
+const getPieChart = async () => {
+  const pieChartReference = ref(db, "pie-chart");
+  const snapshot = await get(pieChartReference);
+
+  return snapshot.val();
+};
+
+const getAllorders = async () => {
+  const ordersReference = ref(db, "orders");
+  const snapshot = await get(ordersReference);
+
+  return snapshot.val();
+};
+
+const getLastFiveOrders = async () => {
+  const ordersReference = ref(db, "orders");
+  const snapshot = await get(ordersReference);
+  const orders = snapshot.val();
+  const lastFiveOrders = orders.slice(Math.max(orders.length - 5, 0));
+
+  return lastFiveOrders;
+};
+
+export { getLineChart, getPieChart, getAllorders, getLastFiveOrders };
