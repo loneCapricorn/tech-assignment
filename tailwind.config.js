@@ -19,6 +19,9 @@ export default {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
         "button": "3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff",
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
     },
   },
   plugins: [],
