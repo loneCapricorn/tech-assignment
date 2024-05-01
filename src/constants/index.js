@@ -1,7 +1,5 @@
 import { facebook, instagram, twitter } from "../assets/icons";
 
-const loginURL = "https://0wzm4.wiremockapi.cloud/login";
-const orderHistoryURL = "https://0wzm4.wiremockapi.cloud/orders";
 
 const FORM_LOGO =
   "https://images.assetsdelivery.com/compings_v2/triken/triken1608/triken160800029.jpg";
@@ -61,8 +59,6 @@ const socialMedia = [
 ];
 
 export {
-  loginURL,
-  orderHistoryURL,
   FORM_LOGO,
   navbarItems,
   footerLinks,
