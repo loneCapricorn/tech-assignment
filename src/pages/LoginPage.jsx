@@ -16,8 +16,8 @@ const LoginPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const email = event.target.elements.email.value;
-    const pass = event.target.elements.password.value;
+    // const email = event.target.elements.email.value;
+    // const pass = event.target.elements.password.value;
 
     // Do something with the email and password
   };
