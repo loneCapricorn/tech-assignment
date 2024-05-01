@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 // layouts and pages
 import RootLayout from "./layouts/RootLayout";
@@ -11,7 +12,6 @@ import MainDashboard from "./pages/MainDashboard";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import OrderHistory from "./pages/OrderHistory";
-import { loadOrderHistory } from "./services/request-services";
 
 // router and routes
 const router = createBrowserRouter(
@@ -20,13 +20,19 @@ const router = createBrowserRouter(
       <Route index element={<MainDashboard />} />
       <Route path="*" element={<NotFound />} />
       <Route path="login" element={<LoginPage />} />
-      <Route path="order-history" element={<OrderHistory />} loader={loadOrderHistory} />
+      <Route path="order-history" element={<OrderHistory />} />
     </Route>
   )
 );
 
+const queryClient = new QueryClient();
+
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 };
 
 export default App;
