@@ -70,7 +70,7 @@ const LoginPage = () => {
             )}
           </div>
         </div>
-        <button className="outline-none border-none cursor-pointer w-full h-14 rounded-3xl text-xl font-bold text-white bg-[#fc5130] shadow-button hover:bg-[#000] active:bg-[#ff843c]">
+        <button className="outline-none border-none cursor-pointer w-full h-14 rounded-3xl text-xl font-bold text-white bg-[#44403c] shadow-button hover:bg-[#000]">
           Login
         </button>
         <div className="p-5 text-center text-base">
