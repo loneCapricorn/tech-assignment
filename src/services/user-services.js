@@ -10,7 +10,7 @@ const createUserHandle = (handle, uid, email) => {
     handle,
     uid,
     email,
-    createdOn: new Date(),
+    createdOn: Date.now(),
   });
 };
 
