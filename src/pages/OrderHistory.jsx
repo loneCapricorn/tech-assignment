@@ -4,9 +4,11 @@ import OrderCard from "../components/OrderCard";
 import Loader from "../components/Loader";
 
 const OrderHistory = () => {
-  // const orders = useLoaderData();
-
-  const { data: orders, isLoading, error } = useQuery("ordersData", getAllorders );
+  const {
+    data: orders,
+    isLoading,
+    error,
+  } = useQuery("ordersData", getAllorders);
 
   if (isLoading) {
     return <Loader />;

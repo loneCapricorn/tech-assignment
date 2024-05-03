@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const OrderCard = ({ customer, date, total, action }) => {
   return (
-    <li className="flex-1 flex flex-col items-center justify-between rounded-2xl shadow-3xl px-10 py-12 transition duration-500 hover:scale-105">
+    <li className="flex-1 flex flex-col items-center justify-between min-w-80 rounded-2xl shadow-3xl px-10 py-12 transition duration-500 hover:scale-105">
       <h2 className="font-palanquin text-3xl font-bold">{customer}</h2>
 
       <div className="flex flex-col gap-2 mt-5 font-montserrat text-lg text-slate-gray break-words leading-none">
