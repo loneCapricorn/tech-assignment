@@ -2,7 +2,7 @@ import { Form, useNavigate } from "react-router-dom";
 import { FORM_LOGO } from "../constants";
 
 // context
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import AppContext from "../providers/AppContext";
 
 // services
@@ -15,8 +15,12 @@ import { MdAlternateEmail } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 
 const SignUp = () => {
-  const { setContext } = useContext(AppContext);
+  const { user, setContext } = useContext(AppContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    user ? navigate("/dashboard") : null;
+  }, [user, navigate]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -46,7 +50,7 @@ const SignUp = () => {
   };
 
   return (
-    <main className="relative h-[92vh] bg-[#ecf0f3]">
+    <main className="relative h-screen bg-[#ecf0f3]">
       <Form
         onSubmit={handleSubmit}
         className="absolute-position-center form-element"

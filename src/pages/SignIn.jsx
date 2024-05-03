@@ -2,7 +2,7 @@ import { Form, NavLink, useNavigate } from "react-router-dom";
 import { FORM_LOGO } from "../constants";
 
 // hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 
 // context
@@ -17,11 +17,14 @@ import { FaEyeSlash } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 
-
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { setContext } = useContext(AppContext);
+  const { user, setContext } = useContext(AppContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    user ? navigate("/dashboard") : null;
+  }, [user, navigate]);
 
   const togglePassword = () => {
     setShowPassword(!showPassword);
@@ -39,7 +42,6 @@ const SignIn = () => {
       alert(
         "Welcome back! You've successfully logged in. Enjoy your experience!"
       );
-      navigate("/dashboard");
     } catch (error) {
       switch (error.message) {
         case "Firebase: Error (auth/invalid-email).":
@@ -63,7 +65,7 @@ const SignIn = () => {
   };
 
   return (
-    <main className="relative h-[92vh] bg-[#ecf0f3]">
+    <main className="relative h-screen bg-[#ecf0f3]">
       <Form
         onSubmit={handleSubmit}
         className="absolute-position-center form-element"
@@ -75,7 +77,7 @@ const SignIn = () => {
             className="w-24 h-24 rounded-[50%]"
           />
           <h2 className="text-[#555] text-3xl tracking-wider font-medium">
-            Login
+            Sign in
           </h2>
         </div>
         <div className="w-full p-1">
