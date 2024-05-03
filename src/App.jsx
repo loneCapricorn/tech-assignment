@@ -5,11 +5,20 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
+
+// hooks
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+
+// services
 import { auth } from "./config/firebase-config.js";
 import { getUserData } from "./services/user-services.js";
+import Authenticated from './hoc/Authenticated'
+
+// context
 import AppContext from "./providers/AppContext.js";
+
+
 
 // layouts and pages
 import RootLayout from "./layouts/RootLayout";
@@ -26,10 +35,10 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<LandingPage />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="dashboard" element={<MainDashboard />} />
+      <Route path="dashboard" element={<Authenticated><MainDashboard /></Authenticated>} />
       <Route path="sign-in" element={<SignIn />} />
       <Route path="sign-up" element={<SignUp />} />
-      <Route path="order-history" element={<OrderHistory />} />
+      <Route path="order-history" element={<Authenticated><OrderHistory /></Authenticated>} />
     </Route>
   )
 );
