@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-primary p-5">
       <div className="flex justify-between gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start gap-5">
-          <a href="/">
+          <a href="/dashboard">
             <img src={dashboard} />
           </a>
           <p className="font-montserrat text-white-400 sm:max-w-sm">
