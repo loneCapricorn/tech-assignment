@@ -14,8 +14,8 @@ const LandingPage = () => {
         </div>
 
         <div className="p-5 text-center text-base">
-          <NavLink to={"/login"} className="no-underline text-[#aaa]">
-            Login
+          <NavLink to={"/sign-in"} className="no-underline text-[#aaa]">
+            Sign In
           </NavLink>
           <span className="font-semibold"> or </span>
           <NavLink to={"/sign-up"} className="no-underline text-[#aaa]">
