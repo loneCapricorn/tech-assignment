@@ -7,11 +7,7 @@ const FORM_LOGO =
 const navbarItems = [
   {
     label: "Dashboard",
-    path: "/",
-  },
-  {
-    label: "Login",
-    path: "/login",
+    path: "/dashboard",
   },
   {
     label: "Order history",
