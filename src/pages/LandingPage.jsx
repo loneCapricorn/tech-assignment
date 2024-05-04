@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <main className="relative h-[92vh] bg-[#ecf0f3]">
+    <main className="relative h-screen bg-[#ecf0f3]">
       <div className="absolute-position-center form-element">
         <div className="flex flex-col items-center gap-5">
           <h2 className="text-center font-semibold">
