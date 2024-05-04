@@ -12,6 +12,8 @@ Welcome to our innovative React application, which offers convenience and ease i
 - JavaScript
 - React
 - Git
+- Firebase (real-time database)
+- Firebase (authentication)
 
 
 
