@@ -52,8 +52,8 @@ const MainDashboard = () => {
   }
 
   return (
-    <main>
-      <div className="m-5">
+    <main className="mt-10">
+      <div>
         <h2 className="pl-5 font-palanquin font-semibold underline text-[#f59e0b]">
           Line Chart
         </h2>
